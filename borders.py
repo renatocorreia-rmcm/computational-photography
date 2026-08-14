@@ -19,7 +19,7 @@ show(
 )
 
 show(
-    cv.copyMakeBorder(img,1000,1000,1000,1000,cv.BORDER_REFLECT_101)
+    cv.copyMakeBorder(img,100,100,100,100,cv.BORDER_REFLECT_101)
 )
 
 show(
