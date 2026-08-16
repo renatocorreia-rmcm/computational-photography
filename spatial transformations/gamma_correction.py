@@ -1,12 +1,6 @@
 import cv2 as cv
 import numpy as np
-
-
-def show(img):
-    cv.imshow("", img); cv.waitKey(0)
-
-img = cv.imread("assets/smallpuppy.png", cv.IMREAD_GRAYSCALE)
-
+from skimage import data
 
 
 def gammacorrect(img, gamma):
@@ -20,7 +14,7 @@ def gammacorrect(img, gamma):
     return newimg
 
 for i in range(1, 13):
-    cv.imshow(f"{i/4}", gammacorrect(img, i/4))
+    cv.imshow(f"{i/4}", gammacorrect(data.moon(), i/4))
 
 cv.waitKey(0)
 cv.destroyAllWindows()
